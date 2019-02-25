@@ -113,11 +113,33 @@ header
 	.little-photo
 		width: 343px
 		height: 218px
-		background: url('../img/FirstPhotoLittle.jpg') no-repeat
-		border: 15px solid #fff
-		-webkit-box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.2) 
-		box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.2)
 		margin-top: 93px
+		position: relative
+		perspective: 800px
+		.front, .back
+			backface-visibility: hidden
+			position: absolute
+			left: 0
+			top: 0
+			border: 15px solid #fff
+			-webkit-box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.2) 
+			box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.2)
+			+transition(.8s)
+		.front
+			width: 100%
+			height: 100%
+			background: url('../img/FirstPhotoLittle.jpg') no-repeat
+		.back
+			width: 100%
+			height: 100%
+			background: url('../img/hands-people-woman-hand.jpg') no-repeat
+			background-size: cover
+			transform: rotateY(180deg)
+			
+	.little-photo:hover .front
+		transform: rotateY(180deg)
+	.little-photo:hover .back	
+		transform: rotateY(360deg)
 
 	.big-photo
 		position: absolute
@@ -133,6 +155,7 @@ header
 		box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.15)
 
 
+
 .story-2
 	text-align: center
 	margin-bottom: 110px
@@ -140,12 +163,35 @@ header
 	.big-photo
 		width: 685px
 		height: 543px
-		background: url("../img/Story2PHOTO.jpg") no-repeat
-		background-position: left
-		border: 15px solid #fff
-		-webkit-box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.15) 
-		box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.15)
 		margin-bottom: 96px
+		position: relative
+		-webkit-perspective: 1500px
+		perspective: 1500px
+		.front, .back
+			position: absolute
+			backface-visibility: hidden
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border: 15px solid #fff
+			-webkit-box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.15) 
+			box-shadow: 1px 1px 49px 2px rgba(0,0,0,0.15)
+			+transition(.8s)
+		.front
+			background: url("../img/Story2PHOTO.jpg") no-repeat
+			background-position: left
+		.back
+			-webkit-transform: rotateY(180deg)
+			transform: rotateY(180deg)
+			background: url("../img/man.jpg") no-repeat
+			background-size: cover
+			background-position: left
+	.big-photo:hover .front
+		transform: rotateY(180deg)
+	.big-photo:hover .back	
+		transform: rotateY(360deg)
+
 
 	p
 		font : $PlayfairR
