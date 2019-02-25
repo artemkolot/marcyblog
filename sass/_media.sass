@@ -1,0 +1,97 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+// ≥992px
++media-breakpoint-down(md)
+	h2.title-text
+		// font-size: 24px
+		// line-height: 35px
+	header
+		text-align: center
+		span.main-title
+			display: none
+	.story
+		padding-top: $gutter
+	.story-2
+		text-align: left
+		.big-photo
+			background-position: center
+			height: 343px
+			margin-bottom: $gutter*1.3
+	.video-block
+		margin-bottom: $gutter
+	.story-3
+		text-align: left
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		.little-photo
+			margin: 0
+			width: 100%
+			background-position: center
+		.col-md-6
+			padding: $gutter
+		.comment
+			//display: none
+			position: static
+			height: auto
+			padding: $gutter
+			margin-bottom: $gutter*2
+
+
+// ≥768px
++media-breakpoint-down(sm)
+// ≥576px
++media-breakpoint-down(xs)
+
+//custom
+@media screen and (max-width: 1150px)
+	.story-3
+		text-align: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		.little-photo
+			margin: 0
+			width: 100%
+			background-position: center
+		.col-md-6
+			padding: $gutter
+		.comment
+			//display: none
+			position: static
+			height: auto
+			padding: $gutter
+			margin-bottom: $gutter*2
+			a
+				bottom: 30px
+			h4
+				text-align: left
+				float: none
+				margin-right: 0
+			h5
+				text-align: left
+				//display: inline-block
+
+
+/*==========  Mobile First  ==========*/
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
